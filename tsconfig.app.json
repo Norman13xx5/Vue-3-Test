@@ -1,0 +1,23 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@s/*": ["./src/modules/shared/*"],
+      "@a/*": ["./src/modules/auth/*"],
+      "@pa/*": ["./src/modules/patients/*"],
+      "@pau/*": ["./src/modules/patients/submodules/user/*"],
+      "@pah/*": ["./src/modules/patients/submodules/history/*"],
+      "@pr/*": ["./src/modules/professionals/*"],
+      "@pru/*": ["./src/modules/professionals/submodules/user/*"],
+      "@prh/*": ["./src/modules/professionals/submodules/history/*"],
+      "@ca/*": ["./src/modules/consume-api/*"]
+    }
+  }
+}
